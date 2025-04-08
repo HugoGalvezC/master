@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+
+<groupId>org.example</groupId>
+<artifactId>Jhonny</artifactId>
+<version>1.0-SNAPSHOT</version>
+<packaging>jar</packaging>
+
+
+<name>Jhonny</name>
+<url>http://maven.apache.org</url>
+
+<properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <maven.compiler.target>23</maven.compiler.target>
+  <maven.compiler.source>23</maven.compiler.source>
+  <aspectj.version>1.9.19</aspectj.version>
+  <allure.version>2.22.0</allure.version>
+  <java.version>23</java.version>
+  <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  <jib-maven-plugin.version>3.1.4</jib-maven-plugin.version>
+  <doxia-site-renderer.version>2.0.0-M3</doxia-site-renderer.version>
+</properties>
+
+<dependencies>
+
+  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+  <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.28.1</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+  <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.10.2</version>
+    <scope>test</scope>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+  <dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.18.1</version>
+    <scope>test</scope>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+  <dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <version>9.0.0</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+  <dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>12.8.1.jre11</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+  <dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.7.4</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+  <dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>5.5.0</version>
+    <scope>test</scope>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/net.minidev/json-smart -->
+  <dependency>
+    <groupId>net.minidev</groupId>
+    <artifactId>json-smart</artifactId>
+    <version>2.5.1</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/org.json/json -->
+  <dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20240303</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+  <dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.11.0</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+  <dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.34</version>
+    <scope>provided</scope>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+  <dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>5.3.0</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+  <dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.3.0</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+  <!--dependency>
+    <groupId>com.github.javafaker</groupId>
+    <artifactId>javafaker</artifactId>
+    <version>1.0.2</version>
+  </dependency-->
+
+  <!-- https://mvnrepository.com/artifact/net.datafaker/datafaker -->
+  <dependency>
+    <groupId>net.datafaker</groupId>
+    <artifactId>datafaker</artifactId>
+    <version>2.3.1</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path -->
+  <dependency>
+    <groupId>com.jayway.jsonpath</groupId>
+    <artifactId>json-path</artifactId>
+    <version>2.9.0</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+  <dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.4.0</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+  <dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.2</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+  <dependency>
+    <groupId>tech.grasshopper</groupId>
+    <artifactId>extentreports-cucumber7-adapter</artifactId>
+    <version>1.14.0</version>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+  <dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.34</version>
+    <scope>provided</scope>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+  <dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>7.18.1</version>
+    <scope>test</scope>
+  </dependency>
+
+
+
+  <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.28.1</version> <!-- Verifica la versión más reciente -->
+  </dependency>
+  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit-platform-engine -->
+  <!--dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit-platform-engine</artifactId>
+    <version>7.18.1</version>
+    <scope>test</scope>
+  </dependency-->
+
+  <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
+  <!--dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-launcher</artifactId>
+    <version>1.11.0</version>
+    <scope>test</scope>
+  </dependency-->
+
+  <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+  <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter</artifactId>
+    <version>5.11.0</version>
+    <scope>test</scope>
+  </dependency>
+
+  <!-- https://mvnrepository.com/artifact/junit/junit -->
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+  </dependency>
+
+</dependencies>
+
+<build>
+  <plugins>
+    <plugin>
+      <groupId>net.masterthought</groupId>
+      <artifactId>maven-cucumber-reporting</artifactId>
+      <version>5.7.4</version>
+      <executions>
+        <execution>
+          <id>execution</id>
+          <phase>verify</phase>
+          <goals>
+            <goal>generate</goal>
+          </goals>
+          <configuration>
+            <projectName>Selenium_Cucumber</projectName>
+            <outputDirectory>${project.build.directory}/cucumber-reports-html</outputDirectory>
+            <inputDirectory>${project.build.directory}/cucumber</inputDirectory>
+            <jsonFiles>
+              <param>**/*.json</param>
+            </jsonFiles>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.0.0-M7</version>
+      <configuration>
+        <includes>
+          <include>**/services/RunCucumberTests.java</include>
+        </includes>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+
+</project>
